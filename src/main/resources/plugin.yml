@@ -1,0 +1,16 @@
+main: us.prismarinemc.party.Party
+name: Party
+author: crepppy
+version: 1.0
+
+commands:
+    party:
+        description: Party Command
+        usage: /<command>
+        aliases: p
+    unlink:
+        description: Unlinks discord account from minecraft account
+        usage: /<command>
+    link:
+        description: Links discord account to minecraft account
+        usage: /<command>

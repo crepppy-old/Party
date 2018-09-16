@@ -1,0 +1,20 @@
+##Plugin made by crepppy.
+##Version 1.0
+
+#Commands all party players will do if the leader does them (joining games are done silently via command)
+#Just the beginning of the command is needed without '/'
+commands:
+- mptp
+
+##When these commands are run by console using the leader of the party as an argument, everyone in their party will have the command for them
+console-commands:
+- mvtp %player%
+
+#List of discord users and players that have their discord's linked
+linked-accounts: []
+
+#Discord bot token for the /party discord command.
+token: 'NDkwMjc2NDM3MzE2NzMwODgw.Dn29Dg.ClMjFjshLGnwUnskxu8BTRArNpI'
+
+#Lobby for players to join so they can get moved upon doing /party discord
+discord-party-lobby: 433330099996196868
