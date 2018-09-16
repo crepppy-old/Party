@@ -29,12 +29,12 @@ public class Party extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        new Bot(getConfig().getString("token"));
         instance = this;
         parties = new ArrayList<>();
-        saveDefaultConfig();
         getConfig().options().copyDefaults(true);
         getConfig().options().copyHeader(true);
+        saveDefaultConfig();
+        new Bot(getConfig().getString("token"));
         Bukkit.getServer().getPluginCommand("party").setExecutor(new CommandManager());
         Bukkit.getServer().getPluginCommand("link").setExecutor(new BotCommand());
         Bukkit.getServer().getPluginCommand("unlink").setExecutor(new BotCommand());
@@ -54,6 +54,7 @@ public class Party extends JavaPlugin {
         for (OfflinePlayer p : linkedAccounts.keySet()) {
             stringList.add(p.getUniqueId().toString() + ":" + linkedAccounts.get(p).getId());
         }
+        reloadConfig();
         getConfig().set("linked-accounts", stringList);
         saveConfig();
         for (VoiceChannel c : Bot.pChannels) {
