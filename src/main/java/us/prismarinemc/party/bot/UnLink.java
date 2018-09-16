@@ -16,9 +16,10 @@ public class UnLink extends ListenerAdapter {
                         if (i.isOnline() && PartyObject.findParty(i.getPlayer()) != null && PartyObject.findParty(i.getPlayer()).getVc() != null && PartyObject.findParty(i.getPlayer()).getVc().getMembers().contains(event.getMember()))
                             event.getGuild().getController().moveVoiceMember(event.getMember(), event.getGuild().getVoiceChannelById(Party.getInstance().getConfig().getString("discord-party-lobby"))).queue();
                         Party.linkedAccounts.remove(i);
+                        event.getChannel().sendMessage(event.getAuthor().getAsMention() + " Removed linked account").queue();
                     }
                 });
-                event.getChannel().sendMessage(event.getAuthor().getAsMention() + " Removed linked account").queue();
+                
             } else {
                 event.getChannel().sendMessage(event.getAuthor().getAsMention() + " Your minecraft account isn't currently linked with discord").queue();
             }
