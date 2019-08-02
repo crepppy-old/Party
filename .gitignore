@@ -4,3 +4,5 @@ out/
 .target/
 target/
 src/main/java/us/prismarinemc/party/Token.java
+.settings/
+.project
