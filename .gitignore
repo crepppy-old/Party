@@ -3,12 +3,6 @@ out/
 .idea/
 .target/
 target/
-<<<<<<< HEAD
-src/main/java/us/prismarinemc/party/Token.java
-.settings/
-.project
-=======
 .project
 .settings/
 src/main/java/us/prismarinemc/party/Token.java
->>>>>>> eed20c28d3b74c10dadaf50a160a034929c21a27
